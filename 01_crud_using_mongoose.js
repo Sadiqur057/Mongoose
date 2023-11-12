@@ -18,4 +18,13 @@ const createRecords = async() =>{
     console.log(result)
 }
 
+const readRecords = async() =>{
+    const allStudents = await student.find()
+    const stud1 = await student.findOne({ name: 'Samir' });
+    const stud2 = await student.findById('6550f54398b826f5e316152d');
+    console.log(allStudents)
+}
+
+
 createRecords()
+readRecords()
