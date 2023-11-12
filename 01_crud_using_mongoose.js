@@ -25,6 +25,7 @@ const readRecords = async() =>{
     console.log(allStudents)
 }
 
+
 const updateRecords = async()=>{
     let data = await student.updateOne(
         { name: 'Samir' },
@@ -32,5 +33,13 @@ const updateRecords = async()=>{
       );
     console.log(data);
 }
-updateRecords()
+// updateRecords()
 
+const deleteRecords = async()=>{
+    let data = await student.deleteOne({ name: 'Samir' });
+    console.log(data);
+}
+// createRecords()
+// readRecords()
+// updateRecords()
+deleteRecords()
