@@ -7,3 +7,15 @@ const studSchema = new mongoose.Schema({
     dept:String    
 });
 const student = mongoose.model('students',studSchema);
+
+
+const createRecords = async() =>{
+    let data = new student({
+        name:"Samir",
+        cgpa:3.32});
+
+    let result = await data.save();
+    console.log(result)
+}
+
+createRecords()
