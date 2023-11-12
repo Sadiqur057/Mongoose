@@ -25,6 +25,12 @@ const readRecords = async() =>{
     console.log(allStudents)
 }
 
+const updateRecords = async()=>{
+    let data = await student.updateOne(
+        { name: 'Samir' },
+        { $set: { cgpa: 3.44 } }
+      );
+    console.log(data);
+}
+updateRecords()
 
-createRecords()
-readRecords()
