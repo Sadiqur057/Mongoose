@@ -5,6 +5,7 @@ const student = require('./students');
 const app = express();
 app.use(express.json())
 
+// get records from mongodb
 app.get("/", async(req,res)=>{
     let data = await student.find()
     res.send(data);
